@@ -8,3 +8,33 @@ The main idea of the NFCHelper class is:
 1. Manage the startNFC listener with error handling.
 2. Pass a reading function callback to the startNFC, so you are able to handle the reading return value the way you want.
 3. Stop the NFC listener.
+
+## Run The Project
+Clone this repository and run the command:
+```shell
+npm install
+```
+and then link the `react-native-nfc-manager` library with the command:
+```shell
+react-native link react-native-nfc-manager
+```
+
+## Use Case Example
+```javascript
+componentWillMount() {
+  startNFC(this.handleNFCTagReading);
+}
+
+componentWillUnmount() {
+  stopNFC();
+}
+
+handleNFCTagReading = nfcResult => {
+  if (nfcResult.Error) {
+    console.log(`Error title: ${nfcResult.Error.Title}`);
+    console.log(`Error description: ${nfcResult.Error.Message}`);
+  } else {
+    console.log(`Tag value found: ${nfcResult.tagValue}`);
+  }
+};
+```
