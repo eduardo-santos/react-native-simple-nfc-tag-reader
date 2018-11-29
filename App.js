@@ -66,7 +66,7 @@ const styles = StyleSheet.create({
   titleMessage: {
     fontWeight: "bold",
     fontSize: 18,
-    marginTop: 32
+    marginTop: 34
   },
   descriptionMessage: {
     fontWeight: "normal",
