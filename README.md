@@ -9,6 +9,8 @@ The main idea of the NFCHelper class is:
 2. Pass a reading function callback to the startNFC, so you are able to handle the reading return value the way you want.
 3. Stop the NFC listener.
 
+I've written a [medium post](https://medium.com/p/4bb015e8d718/) (in portuguese language) to show more detailed information about NFC and this project. Check it out.
+
 ## Run The Project
 Clone this repository and run the command:
 ```shell
